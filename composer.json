@@ -1,0 +1,69 @@
+{
+    "name": "rinart73/document-helper",
+    "description": "CodeIgniter 4 library for that allows for easier HTML generation, particularly when it comes to head tags, scripts, styles and images",
+    "license": "MIT",
+    "type": "library",
+    "keywords": [
+        "codeigniter",
+        "codeigniter4"
+    ],
+    "authors": [
+        {
+            "name": "Artem Romanko",
+            "email": "rinart73@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "homepage": "https://github.com/rinart73/document-helper",
+    "support": {
+        "issues": "https://github.com/rinart73/document-helper/issues",
+        "source": "https://github.com/rinart73/document-helper"
+    },
+    "require": {
+        "php": ">=7.4.0"
+    },
+    "require-dev": {
+        "codeigniter4/devkit": "dev-develop",
+        "codeigniter4/framework": "^4.2.7",
+        "mikey179/vfsstream": "^1.6",
+        "nexusphp/tachycardia": "^1.4",
+        "roave/security-advisories": "dev-latest"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "autoload": {
+        "psr-4": {
+            "Rinart73\\DocumentHelper\\": "src/"
+        },
+        "files": [
+            "src/Helpers/document_helper.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\Support\\": "tests/_support"
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "phpstan/extension-installer": true
+        }
+    },
+    "scripts": {
+        "analyze": [
+            "phpstan analyze",
+            "psalm",
+            "rector process --dry-run"
+        ],
+        "cs": "php-cs-fixer fix --ansi --verbose --dry-run --diff",
+        "cs-fix": "php-cs-fixer fix --ansi --verbose --diff",
+        "deduplicate": "phpcpd src/",
+        "mutate": [
+            "Composer\\Config::disableProcessTimeout",
+            "infection --threads=2 --skip-initial-tests --coverage=build/phpunit"
+        ],
+        "sa": "@analyze",
+        "style": "@cs-fix",
+        "test": "phpunit"
+    }
+}
