@@ -1,0 +1,19 @@
+{
+	"source": {
+		"directories": [
+			"src/"
+		],
+		"excludes": [
+			"Config"
+		]
+	},
+  "timeout": 10,
+	"logs": {
+		"text": "build/infection.log",
+		"html": "build/infection.html"
+	},
+	"mutators": {
+		"@default": true
+	},
+	"bootstrap": "vendor/codeigniter4/framework/system/Test/bootstrap.php"
+}
