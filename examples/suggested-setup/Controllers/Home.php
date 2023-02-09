@@ -13,8 +13,7 @@ class Home extends BaseController
             ->setMeta('robots', 'index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large')
             ->addLink('canonical', 'https://example.com')
             ->addLink('alternate', 'https://example.com/', ['hreflang' => 'en'])
-            ->addLink('alternate', 'https://example.com/ru/', ['hreflang' => 'ru'])
-            ->addBodyClasses('page-home');
+            ->addLink('alternate', 'https://example.com/ru/', ['hreflang' => 'ru']);
 
         return view('home');
     }

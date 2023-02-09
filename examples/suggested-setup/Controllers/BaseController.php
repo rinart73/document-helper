@@ -89,12 +89,12 @@ abstract class BaseController extends Controller
             'app-common',
             'assets/css/common.css',
             ['bootstrap'],
-            '1.0.1',
+            true,
         )->registerScript(
             'app-common',
             'assets/js/common.js',
             ['bootstrap'],
-            '1.0.1',
+            true,
         );
 
         // Home page
@@ -102,7 +102,7 @@ abstract class BaseController extends Controller
             'app-home',
             'assets/js/home.js',
             ['app-common'],
-            '1.0.3',
+            true,
         );
     }
 
@@ -115,7 +115,7 @@ abstract class BaseController extends Controller
             ->setMeta('charset', 'utf-8')
             ->setMeta('viewport', 'width=device-width, initial-scale=1')
             ->setMeta('robots', 'index, follow')
-            ->addScripts('bootstrap', 'app-common');
+            ->addScripts('app-common');
 
         $this->document->localizeScript('app-common', 'appCommonData', [
             'baseUrl' => base_url(),
@@ -129,8 +129,8 @@ abstract class BaseController extends Controller
     {
         $this->documentImages->setReportMissing(true)
             ->setAlternateTypes(IMAGETYPE_WEBP)
-            ->setQuality(85)
-            ->setSrcsetWidths(1536, 1024, 768)
-            ->setImgAttributes(['class' => 'img-fluid', 'loading' => 'lazy']);
+            ->setDefaultQuality(85)
+            ->setDefaultSrcsetWidths(1536, 1024, 768)
+            ->setDefaultImgAttributes(['class' => 'img-fluid', 'loading' => 'lazy']);
     }
 }
