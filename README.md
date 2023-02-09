@@ -1,7 +1,8 @@
 # Document Helper
 
-[![](https://github.com/rinart73/document-helper/workflows/PHPUnit/badge.svg)](https://github.com/rinart73/document-helper/actions/workflows/phpunit.yml)
-[![](https://github.com/rinart73/document-helper/workflows/PHPStan/badge.svg)](https://github.com/rinart73/document-helper/actions/workflows/phpstan.yml)
+[![PHPUnit](https://github.com/rinart73/document-helper/workflows/PHPUnit/badge.svg)](https://github.com/rinart73/document-helper/actions/workflows/phpunit.yml)
+[![PHPStan](https://github.com/rinart73/document-helper/workflows/PHPStan/badge.svg)](https://github.com/rinart73/document-helper/actions/workflows/phpstan.yml)
+[![Psalm](https://github.com/rinart73/document-helper/actions/workflows/psalm.yml/badge.svg)](https://github.com/rinart73/document-helper/actions/workflows/psalm.yml)
 [![Coverage Status](https://coveralls.io/repos/github/rinart73/document-helper/badge.svg?branch=develop)](https://coveralls.io/github/rinart73/document-helper?branch=develop)
 
 Document Helper is a CodeIgniter 4 library for easier HTML generation, particularly when it comes to meta-tags, styles, scripts and images.
@@ -83,7 +84,7 @@ Then add helper functions into your layouts:
 </body>
 </html>
 ```
-Then you will be able to use the features that the library prodives in your Controllers and Views:
+Then you will be able to use the features that the library provides in your Controllers and Views:
 `Controllers/Articles.php`
 ```php
 namespace App\Controllers;
