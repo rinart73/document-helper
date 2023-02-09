@@ -10,8 +10,8 @@ It's heavilly inspired by OpenCart and Wordpress.
 
 ## Features
 
-- Add document `title`, `meta`, `link` tags in Controllers; `html` and `body` attributes in Controllers and Views.
-- Register scripts and styles that you might need and when you request them, their dependencies are added and sorted **automatically**.
+- Add document `title`, `meta`, `link` tags in Controllers; `html` and `body` classes in Controllers and Views.
+- Register scripts and styles that you might need. When you request them, their dependencies are added and sorted **automatically**.
 - Generate image variants (resized versions for `srcset`, alternative image types such as WebP) and render `img`/`picture` at the same time.
 
 ## Getting Started
@@ -30,7 +30,7 @@ composer require rinart73/document-helper
 ```
 ### Suggested setup
 
-Add the `document` helper and the `Rinart73\DocumentHelper\Document` classes into your `Controllers/BaseController.php`:
+Add the `document` helper and the `Rinart73\DocumentHelper\Document` class into your `Controllers/BaseController.php`:
 ```php
 namespace App\Controllers;
 
@@ -83,7 +83,7 @@ Then add helper functions into your layouts:
 </body>
 </html>
 ```
-Then you will be able to use the features that the library prodives in you Controllers and Views:
+Then you will be able to use the features that the library prodives in your Controllers and Views:
 `Controllers/Articles.php`
 ```php
 namespace App\Controllers;
